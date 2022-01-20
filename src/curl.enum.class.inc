@@ -972,3 +972,142 @@ public:
 	}
 };
 
+class Enumeration_CURLMcode : public das::Enumeration {
+public:
+	Enumeration_CURLMcode() : das::Enumeration("CURLMcode") {
+		external = true;
+		cppName = "CURLMcode";
+		baseType = (das::Type) das::ToBasicType<int>::type;
+		addIEx("CURLM_CALL_MULTI_PERFORM", "CURLM_CALL_MULTI_PERFORM", int64_t(CURLMcode::CURLM_CALL_MULTI_PERFORM), das::LineInfo());
+		addIEx("CURLM_OK", "CURLM_OK", int64_t(CURLMcode::CURLM_OK), das::LineInfo());
+		addIEx("CURLM_BAD_HANDLE", "CURLM_BAD_HANDLE", int64_t(CURLMcode::CURLM_BAD_HANDLE), das::LineInfo());
+		addIEx("CURLM_BAD_EASY_HANDLE", "CURLM_BAD_EASY_HANDLE", int64_t(CURLMcode::CURLM_BAD_EASY_HANDLE), das::LineInfo());
+		addIEx("CURLM_OUT_OF_MEMORY", "CURLM_OUT_OF_MEMORY", int64_t(CURLMcode::CURLM_OUT_OF_MEMORY), das::LineInfo());
+		addIEx("CURLM_INTERNAL_ERROR", "CURLM_INTERNAL_ERROR", int64_t(CURLMcode::CURLM_INTERNAL_ERROR), das::LineInfo());
+		addIEx("CURLM_BAD_SOCKET", "CURLM_BAD_SOCKET", int64_t(CURLMcode::CURLM_BAD_SOCKET), das::LineInfo());
+		addIEx("CURLM_UNKNOWN_OPTION", "CURLM_UNKNOWN_OPTION", int64_t(CURLMcode::CURLM_UNKNOWN_OPTION), das::LineInfo());
+		addIEx("CURLM_ADDED_ALREADY", "CURLM_ADDED_ALREADY", int64_t(CURLMcode::CURLM_ADDED_ALREADY), das::LineInfo());
+		addIEx("CURLM_RECURSIVE_API_CALL", "CURLM_RECURSIVE_API_CALL", int64_t(CURLMcode::CURLM_RECURSIVE_API_CALL), das::LineInfo());
+		addIEx("CURLM_WAKEUP_FAILURE", "CURLM_WAKEUP_FAILURE", int64_t(CURLMcode::CURLM_WAKEUP_FAILURE), das::LineInfo());
+		addIEx("CURLM_BAD_FUNCTION_ARGUMENT", "CURLM_BAD_FUNCTION_ARGUMENT", int64_t(CURLMcode::CURLM_BAD_FUNCTION_ARGUMENT), das::LineInfo());
+		addIEx("CURLM_ABORTED_BY_CALLBACK", "CURLM_ABORTED_BY_CALLBACK", int64_t(CURLMcode::CURLM_ABORTED_BY_CALLBACK), das::LineInfo());
+		addIEx("CURLM_LAST", "CURLM_LAST", int64_t(CURLMcode::CURLM_LAST), das::LineInfo());
+	}
+};
+
+class Enumeration_CURLMSG : public das::Enumeration {
+public:
+	Enumeration_CURLMSG() : das::Enumeration("CURLMSG") {
+		external = true;
+		cppName = "CURLMSG";
+		baseType = (das::Type) das::ToBasicType<int>::type;
+		addIEx("NONE", "CURLMSG_NONE", int64_t(CURLMSG::CURLMSG_NONE), das::LineInfo());
+		addIEx("DONE", "CURLMSG_DONE", int64_t(CURLMSG::CURLMSG_DONE), das::LineInfo());
+		addIEx("LAST", "CURLMSG_LAST", int64_t(CURLMSG::CURLMSG_LAST), das::LineInfo());
+	}
+};
+
+class Enumeration_CURLMoption : public das::Enumeration {
+public:
+	Enumeration_CURLMoption() : das::Enumeration("CURLMoption") {
+		external = true;
+		cppName = "CURLMoption";
+		baseType = (das::Type) das::ToBasicType<int>::type;
+		addIEx("CURLMOPT_SOCKETFUNCTION", "CURLMOPT_SOCKETFUNCTION", int64_t(CURLMoption::CURLMOPT_SOCKETFUNCTION), das::LineInfo());
+		addIEx("CURLMOPT_SOCKETDATA", "CURLMOPT_SOCKETDATA", int64_t(CURLMoption::CURLMOPT_SOCKETDATA), das::LineInfo());
+		addIEx("CURLMOPT_PIPELINING", "CURLMOPT_PIPELINING", int64_t(CURLMoption::CURLMOPT_PIPELINING), das::LineInfo());
+		addIEx("CURLMOPT_TIMERFUNCTION", "CURLMOPT_TIMERFUNCTION", int64_t(CURLMoption::CURLMOPT_TIMERFUNCTION), das::LineInfo());
+		addIEx("CURLMOPT_TIMERDATA", "CURLMOPT_TIMERDATA", int64_t(CURLMoption::CURLMOPT_TIMERDATA), das::LineInfo());
+		addIEx("CURLMOPT_MAXCONNECTS", "CURLMOPT_MAXCONNECTS", int64_t(CURLMoption::CURLMOPT_MAXCONNECTS), das::LineInfo());
+		addIEx("CURLMOPT_MAX_HOST_CONNECTIONS", "CURLMOPT_MAX_HOST_CONNECTIONS", int64_t(CURLMoption::CURLMOPT_MAX_HOST_CONNECTIONS), das::LineInfo());
+		addIEx("CURLMOPT_MAX_PIPELINE_LENGTH", "CURLMOPT_MAX_PIPELINE_LENGTH", int64_t(CURLMoption::CURLMOPT_MAX_PIPELINE_LENGTH), das::LineInfo());
+		addIEx("CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE", "CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE", int64_t(CURLMoption::CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE), das::LineInfo());
+		addIEx("CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE", "CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE", int64_t(CURLMoption::CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE), das::LineInfo());
+		addIEx("CURLMOPT_PIPELINING_SITE_BL", "CURLMOPT_PIPELINING_SITE_BL", int64_t(CURLMoption::CURLMOPT_PIPELINING_SITE_BL), das::LineInfo());
+		addIEx("CURLMOPT_PIPELINING_SERVER_BL", "CURLMOPT_PIPELINING_SERVER_BL", int64_t(CURLMoption::CURLMOPT_PIPELINING_SERVER_BL), das::LineInfo());
+		addIEx("CURLMOPT_MAX_TOTAL_CONNECTIONS", "CURLMOPT_MAX_TOTAL_CONNECTIONS", int64_t(CURLMoption::CURLMOPT_MAX_TOTAL_CONNECTIONS), das::LineInfo());
+		addIEx("CURLMOPT_PUSHFUNCTION", "CURLMOPT_PUSHFUNCTION", int64_t(CURLMoption::CURLMOPT_PUSHFUNCTION), das::LineInfo());
+		addIEx("CURLMOPT_PUSHDATA", "CURLMOPT_PUSHDATA", int64_t(CURLMoption::CURLMOPT_PUSHDATA), das::LineInfo());
+		addIEx("CURLMOPT_MAX_CONCURRENT_STREAMS", "CURLMOPT_MAX_CONCURRENT_STREAMS", int64_t(CURLMoption::CURLMOPT_MAX_CONCURRENT_STREAMS), das::LineInfo());
+		addIEx("CURLMOPT_LASTENTRY", "CURLMOPT_LASTENTRY", int64_t(CURLMoption::CURLMOPT_LASTENTRY), das::LineInfo());
+	}
+};
+
+class Enumeration_CURLUcode : public das::Enumeration {
+public:
+	Enumeration_CURLUcode() : das::Enumeration("CURLUcode") {
+		external = true;
+		cppName = "CURLUcode";
+		baseType = (das::Type) das::ToBasicType<int>::type;
+		addIEx("CURLUE_OK", "CURLUE_OK", int64_t(CURLUcode::CURLUE_OK), das::LineInfo());
+		addIEx("CURLUE_BAD_HANDLE", "CURLUE_BAD_HANDLE", int64_t(CURLUcode::CURLUE_BAD_HANDLE), das::LineInfo());
+		addIEx("CURLUE_BAD_PARTPOINTER", "CURLUE_BAD_PARTPOINTER", int64_t(CURLUcode::CURLUE_BAD_PARTPOINTER), das::LineInfo());
+		addIEx("CURLUE_MALFORMED_INPUT", "CURLUE_MALFORMED_INPUT", int64_t(CURLUcode::CURLUE_MALFORMED_INPUT), das::LineInfo());
+		addIEx("CURLUE_BAD_PORT_NUMBER", "CURLUE_BAD_PORT_NUMBER", int64_t(CURLUcode::CURLUE_BAD_PORT_NUMBER), das::LineInfo());
+		addIEx("CURLUE_UNSUPPORTED_SCHEME", "CURLUE_UNSUPPORTED_SCHEME", int64_t(CURLUcode::CURLUE_UNSUPPORTED_SCHEME), das::LineInfo());
+		addIEx("CURLUE_URLDECODE", "CURLUE_URLDECODE", int64_t(CURLUcode::CURLUE_URLDECODE), das::LineInfo());
+		addIEx("CURLUE_OUT_OF_MEMORY", "CURLUE_OUT_OF_MEMORY", int64_t(CURLUcode::CURLUE_OUT_OF_MEMORY), das::LineInfo());
+		addIEx("CURLUE_USER_NOT_ALLOWED", "CURLUE_USER_NOT_ALLOWED", int64_t(CURLUcode::CURLUE_USER_NOT_ALLOWED), das::LineInfo());
+		addIEx("CURLUE_UNKNOWN_PART", "CURLUE_UNKNOWN_PART", int64_t(CURLUcode::CURLUE_UNKNOWN_PART), das::LineInfo());
+		addIEx("CURLUE_NO_SCHEME", "CURLUE_NO_SCHEME", int64_t(CURLUcode::CURLUE_NO_SCHEME), das::LineInfo());
+		addIEx("CURLUE_NO_USER", "CURLUE_NO_USER", int64_t(CURLUcode::CURLUE_NO_USER), das::LineInfo());
+		addIEx("CURLUE_NO_PASSWORD", "CURLUE_NO_PASSWORD", int64_t(CURLUcode::CURLUE_NO_PASSWORD), das::LineInfo());
+		addIEx("CURLUE_NO_OPTIONS", "CURLUE_NO_OPTIONS", int64_t(CURLUcode::CURLUE_NO_OPTIONS), das::LineInfo());
+		addIEx("CURLUE_NO_HOST", "CURLUE_NO_HOST", int64_t(CURLUcode::CURLUE_NO_HOST), das::LineInfo());
+		addIEx("CURLUE_NO_PORT", "CURLUE_NO_PORT", int64_t(CURLUcode::CURLUE_NO_PORT), das::LineInfo());
+		addIEx("CURLUE_NO_QUERY", "CURLUE_NO_QUERY", int64_t(CURLUcode::CURLUE_NO_QUERY), das::LineInfo());
+		addIEx("CURLUE_NO_FRAGMENT", "CURLUE_NO_FRAGMENT", int64_t(CURLUcode::CURLUE_NO_FRAGMENT), das::LineInfo());
+		addIEx("CURLUE_NO_ZONEID", "CURLUE_NO_ZONEID", int64_t(CURLUcode::CURLUE_NO_ZONEID), das::LineInfo());
+		addIEx("CURLUE_BAD_FILE_URL", "CURLUE_BAD_FILE_URL", int64_t(CURLUcode::CURLUE_BAD_FILE_URL), das::LineInfo());
+		addIEx("CURLUE_BAD_FRAGMENT", "CURLUE_BAD_FRAGMENT", int64_t(CURLUcode::CURLUE_BAD_FRAGMENT), das::LineInfo());
+		addIEx("CURLUE_BAD_HOSTNAME", "CURLUE_BAD_HOSTNAME", int64_t(CURLUcode::CURLUE_BAD_HOSTNAME), das::LineInfo());
+		addIEx("CURLUE_BAD_IPV6", "CURLUE_BAD_IPV6", int64_t(CURLUcode::CURLUE_BAD_IPV6), das::LineInfo());
+		addIEx("CURLUE_BAD_LOGIN", "CURLUE_BAD_LOGIN", int64_t(CURLUcode::CURLUE_BAD_LOGIN), das::LineInfo());
+		addIEx("CURLUE_BAD_PASSWORD", "CURLUE_BAD_PASSWORD", int64_t(CURLUcode::CURLUE_BAD_PASSWORD), das::LineInfo());
+		addIEx("CURLUE_BAD_PATH", "CURLUE_BAD_PATH", int64_t(CURLUcode::CURLUE_BAD_PATH), das::LineInfo());
+		addIEx("CURLUE_BAD_QUERY", "CURLUE_BAD_QUERY", int64_t(CURLUcode::CURLUE_BAD_QUERY), das::LineInfo());
+		addIEx("CURLUE_BAD_SCHEME", "CURLUE_BAD_SCHEME", int64_t(CURLUcode::CURLUE_BAD_SCHEME), das::LineInfo());
+		addIEx("CURLUE_BAD_SLASHES", "CURLUE_BAD_SLASHES", int64_t(CURLUcode::CURLUE_BAD_SLASHES), das::LineInfo());
+		addIEx("CURLUE_BAD_USER", "CURLUE_BAD_USER", int64_t(CURLUcode::CURLUE_BAD_USER), das::LineInfo());
+		addIEx("CURLUE_LAST", "CURLUE_LAST", int64_t(CURLUcode::CURLUE_LAST), das::LineInfo());
+	}
+};
+
+class Enumeration_CURLUPart : public das::Enumeration {
+public:
+	Enumeration_CURLUPart() : das::Enumeration("CURLUPart") {
+		external = true;
+		cppName = "CURLUPart";
+		baseType = (das::Type) das::ToBasicType<int>::type;
+		addIEx("URL", "CURLUPART_URL", int64_t(CURLUPart::CURLUPART_URL), das::LineInfo());
+		addIEx("SCHEME", "CURLUPART_SCHEME", int64_t(CURLUPart::CURLUPART_SCHEME), das::LineInfo());
+		addIEx("USER", "CURLUPART_USER", int64_t(CURLUPart::CURLUPART_USER), das::LineInfo());
+		addIEx("PASSWORD", "CURLUPART_PASSWORD", int64_t(CURLUPart::CURLUPART_PASSWORD), das::LineInfo());
+		addIEx("OPTIONS", "CURLUPART_OPTIONS", int64_t(CURLUPart::CURLUPART_OPTIONS), das::LineInfo());
+		addIEx("HOST", "CURLUPART_HOST", int64_t(CURLUPart::CURLUPART_HOST), das::LineInfo());
+		addIEx("PORT", "CURLUPART_PORT", int64_t(CURLUPart::CURLUPART_PORT), das::LineInfo());
+		addIEx("PATH", "CURLUPART_PATH", int64_t(CURLUPart::CURLUPART_PATH), das::LineInfo());
+		addIEx("QUERY", "CURLUPART_QUERY", int64_t(CURLUPart::CURLUPART_QUERY), das::LineInfo());
+		addIEx("FRAGMENT", "CURLUPART_FRAGMENT", int64_t(CURLUPart::CURLUPART_FRAGMENT), das::LineInfo());
+		addIEx("ZONEID", "CURLUPART_ZONEID", int64_t(CURLUPart::CURLUPART_ZONEID), das::LineInfo());
+	}
+};
+
+class Enumeration_curl_easytype : public das::Enumeration {
+public:
+	Enumeration_curl_easytype() : das::Enumeration("curl_easytype") {
+		external = true;
+		cppName = "curl_easytype";
+		baseType = (das::Type) das::ToBasicType<int>::type;
+		addIEx("CURLOT_LONG", "CURLOT_LONG", int64_t(curl_easytype::CURLOT_LONG), das::LineInfo());
+		addIEx("CURLOT_VALUES", "CURLOT_VALUES", int64_t(curl_easytype::CURLOT_VALUES), das::LineInfo());
+		addIEx("CURLOT_OFF_T", "CURLOT_OFF_T", int64_t(curl_easytype::CURLOT_OFF_T), das::LineInfo());
+		addIEx("CURLOT_OBJECT", "CURLOT_OBJECT", int64_t(curl_easytype::CURLOT_OBJECT), das::LineInfo());
+		addIEx("CURLOT_STRING", "CURLOT_STRING", int64_t(curl_easytype::CURLOT_STRING), das::LineInfo());
+		addIEx("CURLOT_SLIST", "CURLOT_SLIST", int64_t(curl_easytype::CURLOT_SLIST), das::LineInfo());
+		addIEx("CURLOT_CBPTR", "CURLOT_CBPTR", int64_t(curl_easytype::CURLOT_CBPTR), das::LineInfo());
+		addIEx("CURLOT_BLOB", "CURLOT_BLOB", int64_t(curl_easytype::CURLOT_BLOB), das::LineInfo());
+		addIEx("CURLOT_FUNCTION", "CURLOT_FUNCTION", int64_t(curl_easytype::CURLOT_FUNCTION), das::LineInfo());
+	}
+};
+

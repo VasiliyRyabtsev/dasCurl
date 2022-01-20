@@ -14,8 +14,8 @@ namespace das {
 void Module_curl::initFunctions_2() {
 	addExtern< void (*)(void *) , curl_free >(*this,lib,"curl_free",SideEffects::worstDefault,"curl_free")
 		->args({"p"});
-	//addExtern< CURLcode (*)(long) , curl_global_init >(*this,lib,"curl_global_init",SideEffects::worstDefault,"curl_global_init")
-	//	->args({"flags"});
+	addExtern< CURLcode (*)(long) , curl_global_init >(*this,lib,"curl_global_init",SideEffects::worstDefault,"curl_global_init")
+		->args({"flags"});
 	addExtern< void (*)() , curl_global_cleanup >(*this,lib,"curl_global_cleanup",SideEffects::worstDefault,"curl_global_cleanup");
 	addExtern< CURLsslset (*)(curl_sslbackend,const char *,const curl_ssl_backend ***) , curl_global_sslset >(*this,lib,"curl_global_sslset",SideEffects::worstDefault,"curl_global_sslset")
 		->args({"id","name","avail"});
@@ -36,6 +36,19 @@ void Module_curl::initFunctions_2() {
 		->args({""});
 	addExtern< CURLcode (*)(void *,int) , curl_easy_pause >(*this,lib,"curl_easy_pause",SideEffects::worstDefault,"curl_easy_pause")
 		->args({"handle","bitmask"});
+	addExtern< void * (*)() , curl_easy_init >(*this,lib,"curl_easy_init",SideEffects::worstDefault,"curl_easy_init");
+	addExtern< CURLcode (*)(void *) , curl_easy_perform >(*this,lib,"curl_easy_perform",SideEffects::worstDefault,"curl_easy_perform")
+		->args({"curl"});
+	addExtern< void (*)(void *) , curl_easy_cleanup >(*this,lib,"curl_easy_cleanup",SideEffects::worstDefault,"curl_easy_cleanup")
+		->args({"curl"});
+	addExtern< void * (*)(void *) , curl_easy_duphandle >(*this,lib,"curl_easy_duphandle",SideEffects::worstDefault,"curl_easy_duphandle")
+		->args({"curl"});
+	addExtern< void (*)(void *) , curl_easy_reset >(*this,lib,"curl_easy_reset",SideEffects::worstDefault,"curl_easy_reset")
+		->args({"curl"});
+	addExtern< CURLcode (*)(void *,void *,size_t,size_t *) , curl_easy_recv >(*this,lib,"curl_easy_recv",SideEffects::worstDefault,"curl_easy_recv")
+		->args({"curl","buffer","buflen","n"});
+	addExtern< CURLcode (*)(void *,const void *,size_t,size_t *) , curl_easy_send >(*this,lib,"curl_easy_send",SideEffects::worstDefault,"curl_easy_send")
+		->args({"curl","buffer","buflen","n"});
 }
 }
 

@@ -2,6 +2,7 @@
 // all user modifications will be lost after this file is re-generated
 
 #pragma once
+#include "types_setup.h"
 namespace das {
 class Module_curl : public Module {
 public:

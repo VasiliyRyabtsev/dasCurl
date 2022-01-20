@@ -22,38 +22,6 @@ struct curl_httppost_GeneratedAnnotation : ManagedStructureAnnotation<curl_httpp
 	}
 };
 
-struct curl_fileinfo_GeneratedAnnotation : ManagedStructureAnnotation<curl_fileinfo> {
-	curl_fileinfo_GeneratedAnnotation(ModuleLibrary & ml) : ManagedStructureAnnotation ("curl_fileinfo", ml, "curl_fileinfo") {
-	}
-	void init () {
-		addField<DAS_BIND_MANAGED_FIELD(filename)>("filename","filename");
-		addField<DAS_BIND_MANAGED_FIELD(filetype)>("filetype","filetype");
-		addField<DAS_BIND_MANAGED_FIELD(time)>("time","time");
-		addField<DAS_BIND_MANAGED_FIELD(perm)>("perm","perm");
-		addField<DAS_BIND_MANAGED_FIELD(uid)>("uid","uid");
-		addField<DAS_BIND_MANAGED_FIELD(gid)>("gid","gid");
-		addField<DAS_BIND_MANAGED_FIELD(size)>("size","size");
-		addField<DAS_BIND_MANAGED_FIELD(hardlinks)>("hardlinks","hardlinks");
-//		addField<DAS_BIND_MANAGED_FIELD(strings)>("strings","strings");
-		addField<DAS_BIND_MANAGED_FIELD(flags)>("flags","flags");
-		addField<DAS_BIND_MANAGED_FIELD(b_data)>("b_data","b_data");
-		addField<DAS_BIND_MANAGED_FIELD(b_size)>("b_size","b_size");
-		addField<DAS_BIND_MANAGED_FIELD(b_used)>("b_used","b_used");
-	}
-};
-
-struct curl_sockaddr_GeneratedAnnotation : ManagedStructureAnnotation<curl_sockaddr> {
-	curl_sockaddr_GeneratedAnnotation(ModuleLibrary & ml) : ManagedStructureAnnotation ("curl_sockaddr", ml, "curl_sockaddr") {
-	}
-	void init () {
-		addField<DAS_BIND_MANAGED_FIELD(family)>("family","family");
-		addField<DAS_BIND_MANAGED_FIELD(socktype)>("socktype","socktype");
-		addField<DAS_BIND_MANAGED_FIELD(protocol)>("protocol","protocol");
-		addField<DAS_BIND_MANAGED_FIELD(addrlen)>("addrlen","addrlen");
-//		addField<DAS_BIND_MANAGED_FIELD(addr)>("addr","addr");
-	}
-};
-
 struct curl_khkey_GeneratedAnnotation : ManagedStructureAnnotation<curl_khkey> {
 	curl_khkey_GeneratedAnnotation(ModuleLibrary & ml) : ManagedStructureAnnotation ("curl_khkey", ml, "curl_khkey") {
 	}
@@ -157,6 +125,37 @@ struct curl_version_info_data_GeneratedAnnotation : ManagedStructureAnnotation<c
 		addField<DAS_BIND_MANAGED_FIELD(zstd_version)>("zstd_version","zstd_version");
 		addField<DAS_BIND_MANAGED_FIELD(hyper_version)>("hyper_version","hyper_version");
 		addField<DAS_BIND_MANAGED_FIELD(gsasl_version)>("gsasl_version","gsasl_version");
+	}
+};
+
+struct curl_blob_GeneratedAnnotation : ManagedStructureAnnotation<curl_blob> {
+	curl_blob_GeneratedAnnotation(ModuleLibrary & ml) : ManagedStructureAnnotation ("curl_blob", ml, "curl_blob") {
+	}
+	void init () {
+		addField<DAS_BIND_MANAGED_FIELD(data)>("data","data");
+		addField<DAS_BIND_MANAGED_FIELD(len)>("len","len");
+		addField<DAS_BIND_MANAGED_FIELD(flags)>("flags","flags");
+	}
+};
+
+struct curl_waitfd_GeneratedAnnotation : ManagedStructureAnnotation<curl_waitfd> {
+	curl_waitfd_GeneratedAnnotation(ModuleLibrary & ml) : ManagedStructureAnnotation ("curl_waitfd", ml, "curl_waitfd") {
+	}
+	void init () {
+		addField<DAS_BIND_MANAGED_FIELD(fd)>("fd","fd");
+		addField<DAS_BIND_MANAGED_FIELD(events)>("events","events");
+		addField<DAS_BIND_MANAGED_FIELD(revents)>("revents","revents");
+	}
+};
+
+struct curl_easyoption_GeneratedAnnotation : ManagedStructureAnnotation<curl_easyoption> {
+	curl_easyoption_GeneratedAnnotation(ModuleLibrary & ml) : ManagedStructureAnnotation ("curl_easyoption", ml, "curl_easyoption") {
+	}
+	void init () {
+		addField<DAS_BIND_MANAGED_FIELD(name)>("name","name");
+		addField<DAS_BIND_MANAGED_FIELD(id)>("id","id");
+		addField<DAS_BIND_MANAGED_FIELD(type)>("_type","type");
+		addField<DAS_BIND_MANAGED_FIELD(flags)>("flags","flags");
 	}
 };
 

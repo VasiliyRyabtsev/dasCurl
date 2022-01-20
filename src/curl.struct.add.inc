@@ -3,10 +3,6 @@
 
 auto ann_curl_httppost = make_smart<curl_httppost_GeneratedAnnotation>(lib);
 addAnnotation(ann_curl_httppost);
-auto ann_curl_fileinfo = make_smart<curl_fileinfo_GeneratedAnnotation>(lib);
-addAnnotation(ann_curl_fileinfo);
-auto ann_curl_sockaddr = make_smart<curl_sockaddr_GeneratedAnnotation>(lib);
-addAnnotation(ann_curl_sockaddr);
 auto ann_curl_khkey = make_smart<curl_khkey_GeneratedAnnotation>(lib);
 addAnnotation(ann_curl_khkey);
 auto ann_curl_hstsentry = make_smart<curl_hstsentry_GeneratedAnnotation>(lib);
@@ -25,3 +21,9 @@ auto ann_curl_tlssessioninfo = make_smart<curl_tlssessioninfo_GeneratedAnnotatio
 addAnnotation(ann_curl_tlssessioninfo);
 auto ann_curl_version_info_data = make_smart<curl_version_info_data_GeneratedAnnotation>(lib);
 addAnnotation(ann_curl_version_info_data);
+auto ann_curl_blob = make_smart<curl_blob_GeneratedAnnotation>(lib);
+addAnnotation(ann_curl_blob);
+auto ann_curl_waitfd = make_smart<curl_waitfd_GeneratedAnnotation>(lib);
+addAnnotation(ann_curl_waitfd);
+auto ann_curl_easyoption = make_smart<curl_easyoption_GeneratedAnnotation>(lib);
+addAnnotation(ann_curl_easyoption);

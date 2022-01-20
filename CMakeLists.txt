@@ -52,6 +52,8 @@ IF ((NOT DAS_CURL_INCLUDED) AND ((NOT ${DAS_CURL_DISABLED}) OR (NOT DEFINED DAS_
 	# generated functions
 		${DAS_CURL_BIND_DIR}/src/curl.func_1.cpp
 		${DAS_CURL_BIND_DIR}/src/curl.func_2.cpp
+		${DAS_CURL_BIND_DIR}/src/curl.func_3.cpp
+		${DAS_CURL_BIND_DIR}/src/curl.func_4.cpp
 	)
 
 	ADD_MODULE_LIB(libDasModuleCurl)
